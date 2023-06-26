@@ -44,16 +44,16 @@
    query = {...queryObj(ctx.querystring)};
    next()}, () => page = About);
 
- router("/conformance-progress", (ctx, next) => {
-   params = ctx.params;
-   query = {...queryObj(ctx.querystring)};
-   next()}, () => page = ConformanceProgress);
- router("/conformance-progress/endpoints/:release?/:filter?", (ctx, next) => {
-   params = ctx.params;
-   query = {...queryObj(ctx.querystring)};
-   next()}, () => page = ConformanceEndpoints);
- router("/conformance-progress/ineligible-endpoints", () => page = IneligibleEndpoints);
- router("/conformance-progress/pending-endpoints", () => page = PendingEndpoints);
+ // router("/conformance-progress", (ctx, next) => {
+ //   params = ctx.params;
+ //   query = {...queryObj(ctx.querystring)};
+ //   next()}, () => page = ConformanceProgress);
+ // router("/conformance-progress/endpoints/:release?/:filter?", (ctx, next) => {
+ //   params = ctx.params;
+ //   query = {...queryObj(ctx.querystring)};
+ //   next()}, () => page = ConformanceEndpoints);
+ // router("/conformance-progress/ineligible-endpoints", () => page = IneligibleEndpoints);
+ // router("/conformance-progress/pending-endpoints", () => page = PendingEndpoints);
 
  router('/:version?/:level?/:category?/:endpoint?', (ctx, next) => {
    params = ctx.params;

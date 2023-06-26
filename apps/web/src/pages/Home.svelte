@@ -94,33 +94,33 @@
              .then(res => res.json());
          releases.update(rels => ({...rels, [$activeRelease.release]: rel}));
      }
-     if ($confEndpointsRaw && isEmpty($confEndpointsRaw)) {
-         const conformanceEndpoints = await fetch(`${RELEASES_URL}/conformance-endpoints.json`)
-             .then(res => res.json());
-         confEndpointsRaw.set(conformanceEndpoints);
-     }
-     if ($ineligibleEndpoints && isEmpty($ineligibleEndpoints)) {
-       const ineligible= await fetch(INELIGIBLE_ENDPOINTS_URL)
-         .then(res => res.text())
-         .then(text=> yaml.load(text));
-         ineligibleEndpoints.set(ineligible);
-     }
-     if ($pendingEndpoints && isEmpty($pendingEndpoints)) {
-       const pending = await fetch(PENDING_ENDPOINTS_URL)
-         .then(res => res.text())
-         .then(text => yaml.load(text))
-         pendingEndpoints.set(pending);
-     }
-     if ($previousVersion !== 'older' && !isEmpty($releases[$previousVersion]) && isEmpty($releases[$previousVersion].endpoints)) {
-         let rel = await fetch(`${RELEASES_URL}/${$previousVersion}.json`)
-             .then(res => res.json());
-         releases.update(rels => ({...rels, [$previousVersion]: rel}));
-     }
-     if ($olderNewEndpointsRaw.length === 0) {
-         let older = await fetch(`${RELEASES_URL}/new-endpoints.json`)
-             .then(res=>res.json());
-         olderNewEndpointsRaw.set(older);
-     }
+     // if ($confEndpointsRaw && isEmpty($confEndpointsRaw)) {
+     //     const conformanceEndpoints = await fetch(`${RELEASES_URL}/conformance-endpoints.json`)
+     //         .then(res => res.json());
+     //     confEndpointsRaw.set(conformanceEndpoints);
+     // }
+     // if ($ineligibleEndpoints && isEmpty($ineligibleEndpoints)) {
+     //   const ineligible= await fetch(INELIGIBLE_ENDPOINTS_URL)
+     //     .then(res => res.text())
+     //     .then(text=> yaml.load(text));
+     //     ineligibleEndpoints.set(ineligible);
+     // }
+     // if ($pendingEndpoints && isEmpty($pendingEndpoints)) {
+     //   const pending = await fetch(PENDING_ENDPOINTS_URL)
+     //     .then(res => res.text())
+     //     .then(text => yaml.load(text))
+     //     pendingEndpoints.set(pending);
+     // }
+     // if ($previousVersion !== 'older' && !isEmpty($releases[$previousVersion]) && isEmpty($releases[$previousVersion].endpoints)) {
+     //     let rel = await fetch(`${RELEASES_URL}/${$previousVersion}.json`)
+     //         .then(res => res.json());
+     //     releases.update(rels => ({...rels, [$previousVersion]: rel}));
+     // }
+     // if ($olderNewEndpointsRaw.length === 0) {
+     //     let older = await fetch(`${RELEASES_URL}/new-endpoints.json`)
+     //         .then(res=>res.json());
+     //     olderNewEndpointsRaw.set(older);
+     // }
  });
 </script>
 
