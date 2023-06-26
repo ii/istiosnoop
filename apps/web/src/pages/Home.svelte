@@ -125,7 +125,7 @@
 </script>
 
 <svelte:head>
-    <title>APISnoop</title>
+    <title>IstioSnoop</title>
 </svelte:head>
 {#if $activeRelease && $activeRelease.endpoints && $activeRelease.endpoints.length > 0}
     <Sunburst />

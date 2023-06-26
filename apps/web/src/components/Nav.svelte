@@ -5,7 +5,7 @@
 
 <nav>
   <ul>
-    <li> <b>Istiosnoop</b></li>
+    <li class="title"> <b>Istiosnoop</b></li>
     <li><a aria-current="{home ? 'page' : undefined}" href="/">home</a></li>
     <li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="/about">about</a></li>
     <!-- src is at conformance-progress/Index.svelte, so segment is 'Index' -->
@@ -25,6 +25,16 @@
  ul {
    margin: 0;
    padding: 0;
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+ }
+
+ li.title {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-right: 1.5rem;
  }
 
  /* clearfix */
@@ -60,8 +70,4 @@
    display: block;
    cursor: pointer;
  }
- li img {
-   width: 50px;
- }
 </style>
-
