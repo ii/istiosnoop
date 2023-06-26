@@ -129,7 +129,7 @@
 </svelte:head>
 {#if $activeRelease && $activeRelease.endpoints && $activeRelease.endpoints.length > 0}
     <Sunburst />
-    <NewEndpoints />
+    <!-- <NewEndpoints /> -->
 {:else}
     <em>loading data...</em>
 {/if}
