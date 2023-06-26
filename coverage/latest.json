@@ -1,0 +1,4499 @@
+{
+    "spec": "incluster",
+    "tests": null,
+    "release": "live",
+    "sources": null,
+    "endpoints": [
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "createSecurityIstioIoV1NamespacedAuthorizationPolicy",
+            "conf_tested": false,
+            "description": "create an AuthorizationPolicy"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "createSecurityIstioIoV1NamespacedRequestAuthentication",
+            "conf_tested": false,
+            "description": "create a RequestAuthentication"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "deleteSecurityIstioIoV1CollectionNamespacedAuthorizationPolicy",
+            "conf_tested": false,
+            "description": "delete collection of AuthorizationPolicy"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "deleteSecurityIstioIoV1CollectionNamespacedRequestAuthentication",
+            "conf_tested": false,
+            "description": "delete collection of RequestAuthentication"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies/{name}",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "deleteSecurityIstioIoV1NamespacedAuthorizationPolicy",
+            "conf_tested": false,
+            "description": "delete an AuthorizationPolicy"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications/{name}",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "deleteSecurityIstioIoV1NamespacedRequestAuthentication",
+            "conf_tested": false,
+            "description": "delete a RequestAuthentication"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1/authorizationpolicies",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "listSecurityIstioIoV1AuthorizationPolicyForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind AuthorizationPolicy"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "listSecurityIstioIoV1NamespacedAuthorizationPolicy",
+            "conf_tested": false,
+            "description": "list objects of kind AuthorizationPolicy"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "listSecurityIstioIoV1NamespacedRequestAuthentication",
+            "conf_tested": false,
+            "description": "list objects of kind RequestAuthentication"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1/requestauthentications",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "listSecurityIstioIoV1RequestAuthenticationForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind RequestAuthentication"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies/{name}",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "patchSecurityIstioIoV1NamespacedAuthorizationPolicy",
+            "conf_tested": false,
+            "description": "partially update the specified AuthorizationPolicy"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies/{name}/status",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "patchSecurityIstioIoV1NamespacedAuthorizationPolicyStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified AuthorizationPolicy"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications/{name}",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "patchSecurityIstioIoV1NamespacedRequestAuthentication",
+            "conf_tested": false,
+            "description": "partially update the specified RequestAuthentication"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications/{name}/status",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "patchSecurityIstioIoV1NamespacedRequestAuthenticationStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified RequestAuthentication"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies/{name}",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "readSecurityIstioIoV1NamespacedAuthorizationPolicy",
+            "conf_tested": false,
+            "description": "read the specified AuthorizationPolicy"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies/{name}/status",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "readSecurityIstioIoV1NamespacedAuthorizationPolicyStatus",
+            "conf_tested": false,
+            "description": "read status of the specified AuthorizationPolicy"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications/{name}",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "readSecurityIstioIoV1NamespacedRequestAuthentication",
+            "conf_tested": false,
+            "description": "read the specified RequestAuthentication"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications/{name}/status",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "readSecurityIstioIoV1NamespacedRequestAuthenticationStatus",
+            "conf_tested": false,
+            "description": "read status of the specified RequestAuthentication"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies/{name}",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "replaceSecurityIstioIoV1NamespacedAuthorizationPolicy",
+            "conf_tested": false,
+            "description": "replace the specified AuthorizationPolicy"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies/{name}/status",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "replaceSecurityIstioIoV1NamespacedAuthorizationPolicyStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified AuthorizationPolicy"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications/{name}",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "replaceSecurityIstioIoV1NamespacedRequestAuthentication",
+            "conf_tested": false,
+            "description": "replace the specified RequestAuthentication"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications/{name}/status",
+            "group": "security.istio.io",
+            "level": "stable",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1",
+            "category": "securityIstioIo",
+            "endpoint": "replaceSecurityIstioIoV1NamespacedRequestAuthenticationStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified RequestAuthentication"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/destinationrules",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "createNetworkingIstioIoV1beta1NamespacedDestinationRule",
+            "conf_tested": false,
+            "description": "create a DestinationRule"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/gateways",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "createNetworkingIstioIoV1beta1NamespacedGateway",
+            "conf_tested": false,
+            "description": "create a Gateway"
+        },
+        {
+            "kind": "ProxyConfig",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/proxyconfigs",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "createNetworkingIstioIoV1beta1NamespacedProxyConfig",
+            "conf_tested": false,
+            "description": "create a ProxyConfig"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/serviceentries",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "createNetworkingIstioIoV1beta1NamespacedServiceEntry",
+            "conf_tested": false,
+            "description": "create a ServiceEntry"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/sidecars",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "createNetworkingIstioIoV1beta1NamespacedSidecar",
+            "conf_tested": false,
+            "description": "create a Sidecar"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/virtualservices",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "createNetworkingIstioIoV1beta1NamespacedVirtualService",
+            "conf_tested": false,
+            "description": "create a VirtualService"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadentries",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "createNetworkingIstioIoV1beta1NamespacedWorkloadEntry",
+            "conf_tested": false,
+            "description": "create a WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadgroups",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "createNetworkingIstioIoV1beta1NamespacedWorkloadGroup",
+            "conf_tested": false,
+            "description": "create a WorkloadGroup"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/authorizationpolicies",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "createSecurityIstioIoV1beta1NamespacedAuthorizationPolicy",
+            "conf_tested": false,
+            "description": "create an AuthorizationPolicy"
+        },
+        {
+            "kind": "PeerAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/peerauthentications",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "createSecurityIstioIoV1beta1NamespacedPeerAuthentication",
+            "conf_tested": false,
+            "description": "create a PeerAuthentication"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/requestauthentications",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "createSecurityIstioIoV1beta1NamespacedRequestAuthentication",
+            "conf_tested": false,
+            "description": "create a RequestAuthentication"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/destinationrules",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1beta1CollectionNamespacedDestinationRule",
+            "conf_tested": false,
+            "description": "delete collection of DestinationRule"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/gateways",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1beta1CollectionNamespacedGateway",
+            "conf_tested": false,
+            "description": "delete collection of Gateway"
+        },
+        {
+            "kind": "ProxyConfig",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/proxyconfigs",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1beta1CollectionNamespacedProxyConfig",
+            "conf_tested": false,
+            "description": "delete collection of ProxyConfig"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/serviceentries",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1beta1CollectionNamespacedServiceEntry",
+            "conf_tested": false,
+            "description": "delete collection of ServiceEntry"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/sidecars",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1beta1CollectionNamespacedSidecar",
+            "conf_tested": false,
+            "description": "delete collection of Sidecar"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/virtualservices",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1beta1CollectionNamespacedVirtualService",
+            "conf_tested": false,
+            "description": "delete collection of VirtualService"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadentries",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1beta1CollectionNamespacedWorkloadEntry",
+            "conf_tested": false,
+            "description": "delete collection of WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadgroups",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1beta1CollectionNamespacedWorkloadGroup",
+            "conf_tested": false,
+            "description": "delete collection of WorkloadGroup"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/destinationrules/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1beta1NamespacedDestinationRule",
+            "conf_tested": false,
+            "description": "delete a DestinationRule"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/gateways/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1beta1NamespacedGateway",
+            "conf_tested": false,
+            "description": "delete a Gateway"
+        },
+        {
+            "kind": "ProxyConfig",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/proxyconfigs/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1beta1NamespacedProxyConfig",
+            "conf_tested": false,
+            "description": "delete a ProxyConfig"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/serviceentries/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1beta1NamespacedServiceEntry",
+            "conf_tested": false,
+            "description": "delete a ServiceEntry"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/sidecars/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1beta1NamespacedSidecar",
+            "conf_tested": false,
+            "description": "delete a Sidecar"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/virtualservices/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1beta1NamespacedVirtualService",
+            "conf_tested": false,
+            "description": "delete a VirtualService"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadentries/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1beta1NamespacedWorkloadEntry",
+            "conf_tested": false,
+            "description": "delete a WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadgroups/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1beta1NamespacedWorkloadGroup",
+            "conf_tested": false,
+            "description": "delete a WorkloadGroup"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/authorizationpolicies",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "deleteSecurityIstioIoV1beta1CollectionNamespacedAuthorizationPolicy",
+            "conf_tested": false,
+            "description": "delete collection of AuthorizationPolicy"
+        },
+        {
+            "kind": "PeerAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/peerauthentications",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "deleteSecurityIstioIoV1beta1CollectionNamespacedPeerAuthentication",
+            "conf_tested": false,
+            "description": "delete collection of PeerAuthentication"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/requestauthentications",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "deleteSecurityIstioIoV1beta1CollectionNamespacedRequestAuthentication",
+            "conf_tested": false,
+            "description": "delete collection of RequestAuthentication"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/authorizationpolicies/{name}",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "deleteSecurityIstioIoV1beta1NamespacedAuthorizationPolicy",
+            "conf_tested": false,
+            "description": "delete an AuthorizationPolicy"
+        },
+        {
+            "kind": "PeerAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/peerauthentications/{name}",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "deleteSecurityIstioIoV1beta1NamespacedPeerAuthentication",
+            "conf_tested": false,
+            "description": "delete a PeerAuthentication"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/requestauthentications/{name}",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "deleteSecurityIstioIoV1beta1NamespacedRequestAuthentication",
+            "conf_tested": false,
+            "description": "delete a RequestAuthentication"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1beta1/destinationrules",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1beta1DestinationRuleForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind DestinationRule"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1beta1/gateways",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1beta1GatewayForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind Gateway"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/destinationrules",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1beta1NamespacedDestinationRule",
+            "conf_tested": false,
+            "description": "list objects of kind DestinationRule"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/gateways",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1beta1NamespacedGateway",
+            "conf_tested": false,
+            "description": "list objects of kind Gateway"
+        },
+        {
+            "kind": "ProxyConfig",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/proxyconfigs",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1beta1NamespacedProxyConfig",
+            "conf_tested": false,
+            "description": "list objects of kind ProxyConfig"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/serviceentries",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1beta1NamespacedServiceEntry",
+            "conf_tested": false,
+            "description": "list objects of kind ServiceEntry"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/sidecars",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1beta1NamespacedSidecar",
+            "conf_tested": false,
+            "description": "list objects of kind Sidecar"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/virtualservices",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1beta1NamespacedVirtualService",
+            "conf_tested": false,
+            "description": "list objects of kind VirtualService"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadentries",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1beta1NamespacedWorkloadEntry",
+            "conf_tested": false,
+            "description": "list objects of kind WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadgroups",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1beta1NamespacedWorkloadGroup",
+            "conf_tested": false,
+            "description": "list objects of kind WorkloadGroup"
+        },
+        {
+            "kind": "ProxyConfig",
+            "path": "/apis/networking.istio.io/v1beta1/proxyconfigs",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1beta1ProxyConfigForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind ProxyConfig"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1beta1/serviceentries",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1beta1ServiceEntryForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind ServiceEntry"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1beta1/sidecars",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1beta1SidecarForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind Sidecar"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1beta1/virtualservices",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1beta1VirtualServiceForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind VirtualService"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1beta1/workloadentries",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1beta1WorkloadEntryForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1beta1/workloadgroups",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1beta1WorkloadGroupForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind WorkloadGroup"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1beta1/authorizationpolicies",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "listSecurityIstioIoV1beta1AuthorizationPolicyForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind AuthorizationPolicy"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/authorizationpolicies",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "listSecurityIstioIoV1beta1NamespacedAuthorizationPolicy",
+            "conf_tested": false,
+            "description": "list objects of kind AuthorizationPolicy"
+        },
+        {
+            "kind": "PeerAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/peerauthentications",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "listSecurityIstioIoV1beta1NamespacedPeerAuthentication",
+            "conf_tested": false,
+            "description": "list objects of kind PeerAuthentication"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/requestauthentications",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "listSecurityIstioIoV1beta1NamespacedRequestAuthentication",
+            "conf_tested": false,
+            "description": "list objects of kind RequestAuthentication"
+        },
+        {
+            "kind": "PeerAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/peerauthentications",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "listSecurityIstioIoV1beta1PeerAuthenticationForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind PeerAuthentication"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/requestauthentications",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "listSecurityIstioIoV1beta1RequestAuthenticationForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind RequestAuthentication"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/destinationrules/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1beta1NamespacedDestinationRule",
+            "conf_tested": false,
+            "description": "partially update the specified DestinationRule"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/destinationrules/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1beta1NamespacedDestinationRuleStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified DestinationRule"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/gateways/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1beta1NamespacedGateway",
+            "conf_tested": false,
+            "description": "partially update the specified Gateway"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/gateways/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1beta1NamespacedGatewayStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified Gateway"
+        },
+        {
+            "kind": "ProxyConfig",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/proxyconfigs/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1beta1NamespacedProxyConfig",
+            "conf_tested": false,
+            "description": "partially update the specified ProxyConfig"
+        },
+        {
+            "kind": "ProxyConfig",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/proxyconfigs/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1beta1NamespacedProxyConfigStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified ProxyConfig"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/serviceentries/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1beta1NamespacedServiceEntry",
+            "conf_tested": false,
+            "description": "partially update the specified ServiceEntry"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/serviceentries/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1beta1NamespacedServiceEntryStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified ServiceEntry"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/sidecars/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1beta1NamespacedSidecar",
+            "conf_tested": false,
+            "description": "partially update the specified Sidecar"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/sidecars/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1beta1NamespacedSidecarStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified Sidecar"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/virtualservices/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1beta1NamespacedVirtualService",
+            "conf_tested": false,
+            "description": "partially update the specified VirtualService"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/virtualservices/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1beta1NamespacedVirtualServiceStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified VirtualService"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadentries/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1beta1NamespacedWorkloadEntry",
+            "conf_tested": false,
+            "description": "partially update the specified WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadentries/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1beta1NamespacedWorkloadEntryStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadgroups/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1beta1NamespacedWorkloadGroup",
+            "conf_tested": false,
+            "description": "partially update the specified WorkloadGroup"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadgroups/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1beta1NamespacedWorkloadGroupStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified WorkloadGroup"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/authorizationpolicies/{name}",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "patchSecurityIstioIoV1beta1NamespacedAuthorizationPolicy",
+            "conf_tested": false,
+            "description": "partially update the specified AuthorizationPolicy"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/authorizationpolicies/{name}/status",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "patchSecurityIstioIoV1beta1NamespacedAuthorizationPolicyStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified AuthorizationPolicy"
+        },
+        {
+            "kind": "PeerAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/peerauthentications/{name}",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "patchSecurityIstioIoV1beta1NamespacedPeerAuthentication",
+            "conf_tested": false,
+            "description": "partially update the specified PeerAuthentication"
+        },
+        {
+            "kind": "PeerAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/peerauthentications/{name}/status",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "patchSecurityIstioIoV1beta1NamespacedPeerAuthenticationStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified PeerAuthentication"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/requestauthentications/{name}",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "patchSecurityIstioIoV1beta1NamespacedRequestAuthentication",
+            "conf_tested": false,
+            "description": "partially update the specified RequestAuthentication"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/requestauthentications/{name}/status",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "patchSecurityIstioIoV1beta1NamespacedRequestAuthenticationStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified RequestAuthentication"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/destinationrules/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1beta1NamespacedDestinationRule",
+            "conf_tested": false,
+            "description": "read the specified DestinationRule"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/destinationrules/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1beta1NamespacedDestinationRuleStatus",
+            "conf_tested": false,
+            "description": "read status of the specified DestinationRule"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/gateways/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1beta1NamespacedGateway",
+            "conf_tested": false,
+            "description": "read the specified Gateway"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/gateways/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1beta1NamespacedGatewayStatus",
+            "conf_tested": false,
+            "description": "read status of the specified Gateway"
+        },
+        {
+            "kind": "ProxyConfig",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/proxyconfigs/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1beta1NamespacedProxyConfig",
+            "conf_tested": false,
+            "description": "read the specified ProxyConfig"
+        },
+        {
+            "kind": "ProxyConfig",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/proxyconfigs/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1beta1NamespacedProxyConfigStatus",
+            "conf_tested": false,
+            "description": "read status of the specified ProxyConfig"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/serviceentries/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1beta1NamespacedServiceEntry",
+            "conf_tested": false,
+            "description": "read the specified ServiceEntry"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/serviceentries/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1beta1NamespacedServiceEntryStatus",
+            "conf_tested": false,
+            "description": "read status of the specified ServiceEntry"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/sidecars/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1beta1NamespacedSidecar",
+            "conf_tested": false,
+            "description": "read the specified Sidecar"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/sidecars/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1beta1NamespacedSidecarStatus",
+            "conf_tested": false,
+            "description": "read status of the specified Sidecar"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/virtualservices/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1beta1NamespacedVirtualService",
+            "conf_tested": false,
+            "description": "read the specified VirtualService"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/virtualservices/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1beta1NamespacedVirtualServiceStatus",
+            "conf_tested": false,
+            "description": "read status of the specified VirtualService"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadentries/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1beta1NamespacedWorkloadEntry",
+            "conf_tested": false,
+            "description": "read the specified WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadentries/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1beta1NamespacedWorkloadEntryStatus",
+            "conf_tested": false,
+            "description": "read status of the specified WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadgroups/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1beta1NamespacedWorkloadGroup",
+            "conf_tested": false,
+            "description": "read the specified WorkloadGroup"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadgroups/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1beta1NamespacedWorkloadGroupStatus",
+            "conf_tested": false,
+            "description": "read status of the specified WorkloadGroup"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/authorizationpolicies/{name}",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "readSecurityIstioIoV1beta1NamespacedAuthorizationPolicy",
+            "conf_tested": false,
+            "description": "read the specified AuthorizationPolicy"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/authorizationpolicies/{name}/status",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "readSecurityIstioIoV1beta1NamespacedAuthorizationPolicyStatus",
+            "conf_tested": false,
+            "description": "read status of the specified AuthorizationPolicy"
+        },
+        {
+            "kind": "PeerAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/peerauthentications/{name}",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "readSecurityIstioIoV1beta1NamespacedPeerAuthentication",
+            "conf_tested": false,
+            "description": "read the specified PeerAuthentication"
+        },
+        {
+            "kind": "PeerAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/peerauthentications/{name}/status",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "readSecurityIstioIoV1beta1NamespacedPeerAuthenticationStatus",
+            "conf_tested": false,
+            "description": "read status of the specified PeerAuthentication"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/requestauthentications/{name}",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "readSecurityIstioIoV1beta1NamespacedRequestAuthentication",
+            "conf_tested": false,
+            "description": "read the specified RequestAuthentication"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/requestauthentications/{name}/status",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "readSecurityIstioIoV1beta1NamespacedRequestAuthenticationStatus",
+            "conf_tested": false,
+            "description": "read status of the specified RequestAuthentication"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/destinationrules/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1beta1NamespacedDestinationRule",
+            "conf_tested": false,
+            "description": "replace the specified DestinationRule"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/destinationrules/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1beta1NamespacedDestinationRuleStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified DestinationRule"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/gateways/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1beta1NamespacedGateway",
+            "conf_tested": false,
+            "description": "replace the specified Gateway"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/gateways/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1beta1NamespacedGatewayStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified Gateway"
+        },
+        {
+            "kind": "ProxyConfig",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/proxyconfigs/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1beta1NamespacedProxyConfig",
+            "conf_tested": false,
+            "description": "replace the specified ProxyConfig"
+        },
+        {
+            "kind": "ProxyConfig",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/proxyconfigs/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1beta1NamespacedProxyConfigStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified ProxyConfig"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/serviceentries/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1beta1NamespacedServiceEntry",
+            "conf_tested": false,
+            "description": "replace the specified ServiceEntry"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/serviceentries/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1beta1NamespacedServiceEntryStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified ServiceEntry"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/sidecars/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1beta1NamespacedSidecar",
+            "conf_tested": false,
+            "description": "replace the specified Sidecar"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/sidecars/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1beta1NamespacedSidecarStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified Sidecar"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/virtualservices/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1beta1NamespacedVirtualService",
+            "conf_tested": false,
+            "description": "replace the specified VirtualService"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/virtualservices/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1beta1NamespacedVirtualServiceStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified VirtualService"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadentries/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1beta1NamespacedWorkloadEntry",
+            "conf_tested": false,
+            "description": "replace the specified WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadentries/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1beta1NamespacedWorkloadEntryStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadgroups/{name}",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1beta1NamespacedWorkloadGroup",
+            "conf_tested": false,
+            "description": "replace the specified WorkloadGroup"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadgroups/{name}/status",
+            "group": "networking.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1beta1NamespacedWorkloadGroupStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified WorkloadGroup"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/authorizationpolicies/{name}",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "replaceSecurityIstioIoV1beta1NamespacedAuthorizationPolicy",
+            "conf_tested": false,
+            "description": "replace the specified AuthorizationPolicy"
+        },
+        {
+            "kind": "AuthorizationPolicy",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/authorizationpolicies/{name}/status",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "replaceSecurityIstioIoV1beta1NamespacedAuthorizationPolicyStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified AuthorizationPolicy"
+        },
+        {
+            "kind": "PeerAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/peerauthentications/{name}",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "replaceSecurityIstioIoV1beta1NamespacedPeerAuthentication",
+            "conf_tested": false,
+            "description": "replace the specified PeerAuthentication"
+        },
+        {
+            "kind": "PeerAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/peerauthentications/{name}/status",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "replaceSecurityIstioIoV1beta1NamespacedPeerAuthenticationStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified PeerAuthentication"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/requestauthentications/{name}",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "replaceSecurityIstioIoV1beta1NamespacedRequestAuthentication",
+            "conf_tested": false,
+            "description": "replace the specified RequestAuthentication"
+        },
+        {
+            "kind": "RequestAuthentication",
+            "path": "/apis/security.istio.io/v1beta1/namespaces/{namespace}/requestauthentications/{name}/status",
+            "group": "security.istio.io",
+            "level": "beta",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1beta1",
+            "category": "securityIstioIo",
+            "endpoint": "replaceSecurityIstioIoV1beta1NamespacedRequestAuthenticationStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified RequestAuthentication"
+        },
+        {
+            "kind": "WasmPlugin",
+            "path": "/apis/extensions.istio.io/v1alpha1/namespaces/{namespace}/wasmplugins",
+            "group": "extensions.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "extensionsIstioIo",
+            "endpoint": "createExtensionsIstioIoV1alpha1NamespacedWasmPlugin",
+            "conf_tested": false,
+            "description": "create a WasmPlugin"
+        },
+        {
+            "kind": "IstioOperator",
+            "path": "/apis/install.istio.io/v1alpha1/namespaces/{namespace}/istiooperators",
+            "group": "install.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "installIstioIo",
+            "endpoint": "createInstallIstioIoV1alpha1NamespacedIstioOperator",
+            "conf_tested": false,
+            "description": "create an IstioOperator"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/destinationrules",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "createNetworkingIstioIoV1alpha3NamespacedDestinationRule",
+            "conf_tested": false,
+            "description": "create a DestinationRule"
+        },
+        {
+            "kind": "EnvoyFilter",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/envoyfilters",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "createNetworkingIstioIoV1alpha3NamespacedEnvoyFilter",
+            "conf_tested": false,
+            "description": "create an EnvoyFilter"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/gateways",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "createNetworkingIstioIoV1alpha3NamespacedGateway",
+            "conf_tested": false,
+            "description": "create a Gateway"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/serviceentries",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "createNetworkingIstioIoV1alpha3NamespacedServiceEntry",
+            "conf_tested": false,
+            "description": "create a ServiceEntry"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/sidecars",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "createNetworkingIstioIoV1alpha3NamespacedSidecar",
+            "conf_tested": false,
+            "description": "create a Sidecar"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/virtualservices",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "createNetworkingIstioIoV1alpha3NamespacedVirtualService",
+            "conf_tested": false,
+            "description": "create a VirtualService"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadentries",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "createNetworkingIstioIoV1alpha3NamespacedWorkloadEntry",
+            "conf_tested": false,
+            "description": "create a WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadgroups",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "createNetworkingIstioIoV1alpha3NamespacedWorkloadGroup",
+            "conf_tested": false,
+            "description": "create a WorkloadGroup"
+        },
+        {
+            "kind": "Telemetry",
+            "path": "/apis/telemetry.istio.io/v1alpha1/namespaces/{namespace}/telemetries",
+            "group": "telemetry.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "post",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "telemetryIstioIo",
+            "endpoint": "createTelemetryIstioIoV1alpha1NamespacedTelemetry",
+            "conf_tested": false,
+            "description": "create a Telemetry"
+        },
+        {
+            "kind": "WasmPlugin",
+            "path": "/apis/extensions.istio.io/v1alpha1/namespaces/{namespace}/wasmplugins",
+            "group": "extensions.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "extensionsIstioIo",
+            "endpoint": "deleteExtensionsIstioIoV1alpha1CollectionNamespacedWasmPlugin",
+            "conf_tested": false,
+            "description": "delete collection of WasmPlugin"
+        },
+        {
+            "kind": "WasmPlugin",
+            "path": "/apis/extensions.istio.io/v1alpha1/namespaces/{namespace}/wasmplugins/{name}",
+            "group": "extensions.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "extensionsIstioIo",
+            "endpoint": "deleteExtensionsIstioIoV1alpha1NamespacedWasmPlugin",
+            "conf_tested": false,
+            "description": "delete a WasmPlugin"
+        },
+        {
+            "kind": "IstioOperator",
+            "path": "/apis/install.istio.io/v1alpha1/namespaces/{namespace}/istiooperators",
+            "group": "install.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "installIstioIo",
+            "endpoint": "deleteInstallIstioIoV1alpha1CollectionNamespacedIstioOperator",
+            "conf_tested": false,
+            "description": "delete collection of IstioOperator"
+        },
+        {
+            "kind": "IstioOperator",
+            "path": "/apis/install.istio.io/v1alpha1/namespaces/{namespace}/istiooperators/{name}",
+            "group": "install.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "installIstioIo",
+            "endpoint": "deleteInstallIstioIoV1alpha1NamespacedIstioOperator",
+            "conf_tested": false,
+            "description": "delete an IstioOperator"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/destinationrules",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1alpha3CollectionNamespacedDestinationRule",
+            "conf_tested": false,
+            "description": "delete collection of DestinationRule"
+        },
+        {
+            "kind": "EnvoyFilter",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/envoyfilters",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1alpha3CollectionNamespacedEnvoyFilter",
+            "conf_tested": false,
+            "description": "delete collection of EnvoyFilter"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/gateways",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1alpha3CollectionNamespacedGateway",
+            "conf_tested": false,
+            "description": "delete collection of Gateway"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/serviceentries",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1alpha3CollectionNamespacedServiceEntry",
+            "conf_tested": false,
+            "description": "delete collection of ServiceEntry"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/sidecars",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1alpha3CollectionNamespacedSidecar",
+            "conf_tested": false,
+            "description": "delete collection of Sidecar"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/virtualservices",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1alpha3CollectionNamespacedVirtualService",
+            "conf_tested": false,
+            "description": "delete collection of VirtualService"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadentries",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1alpha3CollectionNamespacedWorkloadEntry",
+            "conf_tested": false,
+            "description": "delete collection of WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadgroups",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1alpha3CollectionNamespacedWorkloadGroup",
+            "conf_tested": false,
+            "description": "delete collection of WorkloadGroup"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/destinationrules/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1alpha3NamespacedDestinationRule",
+            "conf_tested": false,
+            "description": "delete a DestinationRule"
+        },
+        {
+            "kind": "EnvoyFilter",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/envoyfilters/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1alpha3NamespacedEnvoyFilter",
+            "conf_tested": false,
+            "description": "delete an EnvoyFilter"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/gateways/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1alpha3NamespacedGateway",
+            "conf_tested": false,
+            "description": "delete a Gateway"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/serviceentries/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1alpha3NamespacedServiceEntry",
+            "conf_tested": false,
+            "description": "delete a ServiceEntry"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/sidecars/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1alpha3NamespacedSidecar",
+            "conf_tested": false,
+            "description": "delete a Sidecar"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/virtualservices/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1alpha3NamespacedVirtualService",
+            "conf_tested": false,
+            "description": "delete a VirtualService"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadentries/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1alpha3NamespacedWorkloadEntry",
+            "conf_tested": false,
+            "description": "delete a WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadgroups/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "deleteNetworkingIstioIoV1alpha3NamespacedWorkloadGroup",
+            "conf_tested": false,
+            "description": "delete a WorkloadGroup"
+        },
+        {
+            "kind": "Telemetry",
+            "path": "/apis/telemetry.istio.io/v1alpha1/namespaces/{namespace}/telemetries",
+            "group": "telemetry.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "deletecollection",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "telemetryIstioIo",
+            "endpoint": "deleteTelemetryIstioIoV1alpha1CollectionNamespacedTelemetry",
+            "conf_tested": false,
+            "description": "delete collection of Telemetry"
+        },
+        {
+            "kind": "Telemetry",
+            "path": "/apis/telemetry.istio.io/v1alpha1/namespaces/{namespace}/telemetries/{name}",
+            "group": "telemetry.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "delete",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "telemetryIstioIo",
+            "endpoint": "deleteTelemetryIstioIoV1alpha1NamespacedTelemetry",
+            "conf_tested": false,
+            "description": "delete a Telemetry"
+        },
+        {
+            "kind": "WasmPlugin",
+            "path": "/apis/extensions.istio.io/v1alpha1/namespaces/{namespace}/wasmplugins",
+            "group": "extensions.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "extensionsIstioIo",
+            "endpoint": "listExtensionsIstioIoV1alpha1NamespacedWasmPlugin",
+            "conf_tested": false,
+            "description": "list objects of kind WasmPlugin"
+        },
+        {
+            "kind": "WasmPlugin",
+            "path": "/apis/extensions.istio.io/v1alpha1/wasmplugins",
+            "group": "extensions.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "extensionsIstioIo",
+            "endpoint": "listExtensionsIstioIoV1alpha1WasmPluginForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind WasmPlugin"
+        },
+        {
+            "kind": "IstioOperator",
+            "path": "/apis/install.istio.io/v1alpha1/istiooperators",
+            "group": "install.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "installIstioIo",
+            "endpoint": "listInstallIstioIoV1alpha1IstioOperatorForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind IstioOperator"
+        },
+        {
+            "kind": "IstioOperator",
+            "path": "/apis/install.istio.io/v1alpha1/namespaces/{namespace}/istiooperators",
+            "group": "install.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "installIstioIo",
+            "endpoint": "listInstallIstioIoV1alpha1NamespacedIstioOperator",
+            "conf_tested": false,
+            "description": "list objects of kind IstioOperator"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1alpha3/destinationrules",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1alpha3DestinationRuleForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind DestinationRule"
+        },
+        {
+            "kind": "EnvoyFilter",
+            "path": "/apis/networking.istio.io/v1alpha3/envoyfilters",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1alpha3EnvoyFilterForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind EnvoyFilter"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1alpha3/gateways",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1alpha3GatewayForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind Gateway"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/destinationrules",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1alpha3NamespacedDestinationRule",
+            "conf_tested": false,
+            "description": "list objects of kind DestinationRule"
+        },
+        {
+            "kind": "EnvoyFilter",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/envoyfilters",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1alpha3NamespacedEnvoyFilter",
+            "conf_tested": false,
+            "description": "list objects of kind EnvoyFilter"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/gateways",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1alpha3NamespacedGateway",
+            "conf_tested": false,
+            "description": "list objects of kind Gateway"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/serviceentries",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1alpha3NamespacedServiceEntry",
+            "conf_tested": false,
+            "description": "list objects of kind ServiceEntry"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/sidecars",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1alpha3NamespacedSidecar",
+            "conf_tested": false,
+            "description": "list objects of kind Sidecar"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/virtualservices",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1alpha3NamespacedVirtualService",
+            "conf_tested": false,
+            "description": "list objects of kind VirtualService"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadentries",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1alpha3NamespacedWorkloadEntry",
+            "conf_tested": false,
+            "description": "list objects of kind WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadgroups",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1alpha3NamespacedWorkloadGroup",
+            "conf_tested": false,
+            "description": "list objects of kind WorkloadGroup"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/serviceentries",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1alpha3ServiceEntryForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind ServiceEntry"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1alpha3/sidecars",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1alpha3SidecarForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind Sidecar"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1alpha3/virtualservices",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1alpha3VirtualServiceForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind VirtualService"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/workloadentries",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1alpha3WorkloadEntryForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1alpha3/workloadgroups",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "listNetworkingIstioIoV1alpha3WorkloadGroupForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind WorkloadGroup"
+        },
+        {
+            "kind": "Telemetry",
+            "path": "/apis/telemetry.istio.io/v1alpha1/namespaces/{namespace}/telemetries",
+            "group": "telemetry.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "telemetryIstioIo",
+            "endpoint": "listTelemetryIstioIoV1alpha1NamespacedTelemetry",
+            "conf_tested": false,
+            "description": "list objects of kind Telemetry"
+        },
+        {
+            "kind": "Telemetry",
+            "path": "/apis/telemetry.istio.io/v1alpha1/telemetries",
+            "group": "telemetry.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "list",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "telemetryIstioIo",
+            "endpoint": "listTelemetryIstioIoV1alpha1TelemetryForAllNamespaces",
+            "conf_tested": false,
+            "description": "list objects of kind Telemetry"
+        },
+        {
+            "kind": "WasmPlugin",
+            "path": "/apis/extensions.istio.io/v1alpha1/namespaces/{namespace}/wasmplugins/{name}",
+            "group": "extensions.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "extensionsIstioIo",
+            "endpoint": "patchExtensionsIstioIoV1alpha1NamespacedWasmPlugin",
+            "conf_tested": false,
+            "description": "partially update the specified WasmPlugin"
+        },
+        {
+            "kind": "WasmPlugin",
+            "path": "/apis/extensions.istio.io/v1alpha1/namespaces/{namespace}/wasmplugins/{name}/status",
+            "group": "extensions.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "extensionsIstioIo",
+            "endpoint": "patchExtensionsIstioIoV1alpha1NamespacedWasmPluginStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified WasmPlugin"
+        },
+        {
+            "kind": "IstioOperator",
+            "path": "/apis/install.istio.io/v1alpha1/namespaces/{namespace}/istiooperators/{name}",
+            "group": "install.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "installIstioIo",
+            "endpoint": "patchInstallIstioIoV1alpha1NamespacedIstioOperator",
+            "conf_tested": false,
+            "description": "partially update the specified IstioOperator"
+        },
+        {
+            "kind": "IstioOperator",
+            "path": "/apis/install.istio.io/v1alpha1/namespaces/{namespace}/istiooperators/{name}/status",
+            "group": "install.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "installIstioIo",
+            "endpoint": "patchInstallIstioIoV1alpha1NamespacedIstioOperatorStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified IstioOperator"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/destinationrules/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1alpha3NamespacedDestinationRule",
+            "conf_tested": false,
+            "description": "partially update the specified DestinationRule"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/destinationrules/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1alpha3NamespacedDestinationRuleStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified DestinationRule"
+        },
+        {
+            "kind": "EnvoyFilter",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/envoyfilters/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1alpha3NamespacedEnvoyFilter",
+            "conf_tested": false,
+            "description": "partially update the specified EnvoyFilter"
+        },
+        {
+            "kind": "EnvoyFilter",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/envoyfilters/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1alpha3NamespacedEnvoyFilterStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified EnvoyFilter"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/gateways/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1alpha3NamespacedGateway",
+            "conf_tested": false,
+            "description": "partially update the specified Gateway"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/gateways/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1alpha3NamespacedGatewayStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified Gateway"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/serviceentries/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1alpha3NamespacedServiceEntry",
+            "conf_tested": false,
+            "description": "partially update the specified ServiceEntry"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/serviceentries/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1alpha3NamespacedServiceEntryStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified ServiceEntry"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/sidecars/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1alpha3NamespacedSidecar",
+            "conf_tested": false,
+            "description": "partially update the specified Sidecar"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/sidecars/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1alpha3NamespacedSidecarStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified Sidecar"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/virtualservices/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1alpha3NamespacedVirtualService",
+            "conf_tested": false,
+            "description": "partially update the specified VirtualService"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/virtualservices/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1alpha3NamespacedVirtualServiceStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified VirtualService"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadentries/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1alpha3NamespacedWorkloadEntry",
+            "conf_tested": false,
+            "description": "partially update the specified WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadentries/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1alpha3NamespacedWorkloadEntryStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadgroups/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1alpha3NamespacedWorkloadGroup",
+            "conf_tested": false,
+            "description": "partially update the specified WorkloadGroup"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadgroups/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "patchNetworkingIstioIoV1alpha3NamespacedWorkloadGroupStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified WorkloadGroup"
+        },
+        {
+            "kind": "Telemetry",
+            "path": "/apis/telemetry.istio.io/v1alpha1/namespaces/{namespace}/telemetries/{name}",
+            "group": "telemetry.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "telemetryIstioIo",
+            "endpoint": "patchTelemetryIstioIoV1alpha1NamespacedTelemetry",
+            "conf_tested": false,
+            "description": "partially update the specified Telemetry"
+        },
+        {
+            "kind": "Telemetry",
+            "path": "/apis/telemetry.istio.io/v1alpha1/namespaces/{namespace}/telemetries/{name}/status",
+            "group": "telemetry.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "patch",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "telemetryIstioIo",
+            "endpoint": "patchTelemetryIstioIoV1alpha1NamespacedTelemetryStatus",
+            "conf_tested": false,
+            "description": "partially update status of the specified Telemetry"
+        },
+        {
+            "kind": "WasmPlugin",
+            "path": "/apis/extensions.istio.io/v1alpha1/namespaces/{namespace}/wasmplugins/{name}",
+            "group": "extensions.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "extensionsIstioIo",
+            "endpoint": "readExtensionsIstioIoV1alpha1NamespacedWasmPlugin",
+            "conf_tested": false,
+            "description": "read the specified WasmPlugin"
+        },
+        {
+            "kind": "WasmPlugin",
+            "path": "/apis/extensions.istio.io/v1alpha1/namespaces/{namespace}/wasmplugins/{name}/status",
+            "group": "extensions.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "extensionsIstioIo",
+            "endpoint": "readExtensionsIstioIoV1alpha1NamespacedWasmPluginStatus",
+            "conf_tested": false,
+            "description": "read status of the specified WasmPlugin"
+        },
+        {
+            "kind": "IstioOperator",
+            "path": "/apis/install.istio.io/v1alpha1/namespaces/{namespace}/istiooperators/{name}",
+            "group": "install.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "installIstioIo",
+            "endpoint": "readInstallIstioIoV1alpha1NamespacedIstioOperator",
+            "conf_tested": false,
+            "description": "read the specified IstioOperator"
+        },
+        {
+            "kind": "IstioOperator",
+            "path": "/apis/install.istio.io/v1alpha1/namespaces/{namespace}/istiooperators/{name}/status",
+            "group": "install.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "installIstioIo",
+            "endpoint": "readInstallIstioIoV1alpha1NamespacedIstioOperatorStatus",
+            "conf_tested": false,
+            "description": "read status of the specified IstioOperator"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/destinationrules/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1alpha3NamespacedDestinationRule",
+            "conf_tested": false,
+            "description": "read the specified DestinationRule"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/destinationrules/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1alpha3NamespacedDestinationRuleStatus",
+            "conf_tested": false,
+            "description": "read status of the specified DestinationRule"
+        },
+        {
+            "kind": "EnvoyFilter",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/envoyfilters/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1alpha3NamespacedEnvoyFilter",
+            "conf_tested": false,
+            "description": "read the specified EnvoyFilter"
+        },
+        {
+            "kind": "EnvoyFilter",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/envoyfilters/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1alpha3NamespacedEnvoyFilterStatus",
+            "conf_tested": false,
+            "description": "read status of the specified EnvoyFilter"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/gateways/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1alpha3NamespacedGateway",
+            "conf_tested": false,
+            "description": "read the specified Gateway"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/gateways/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1alpha3NamespacedGatewayStatus",
+            "conf_tested": false,
+            "description": "read status of the specified Gateway"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/serviceentries/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1alpha3NamespacedServiceEntry",
+            "conf_tested": false,
+            "description": "read the specified ServiceEntry"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/serviceentries/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1alpha3NamespacedServiceEntryStatus",
+            "conf_tested": false,
+            "description": "read status of the specified ServiceEntry"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/sidecars/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1alpha3NamespacedSidecar",
+            "conf_tested": false,
+            "description": "read the specified Sidecar"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/sidecars/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1alpha3NamespacedSidecarStatus",
+            "conf_tested": false,
+            "description": "read status of the specified Sidecar"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/virtualservices/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1alpha3NamespacedVirtualService",
+            "conf_tested": false,
+            "description": "read the specified VirtualService"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/virtualservices/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1alpha3NamespacedVirtualServiceStatus",
+            "conf_tested": false,
+            "description": "read status of the specified VirtualService"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadentries/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1alpha3NamespacedWorkloadEntry",
+            "conf_tested": false,
+            "description": "read the specified WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadentries/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1alpha3NamespacedWorkloadEntryStatus",
+            "conf_tested": false,
+            "description": "read status of the specified WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadgroups/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1alpha3NamespacedWorkloadGroup",
+            "conf_tested": false,
+            "description": "read the specified WorkloadGroup"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadgroups/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "readNetworkingIstioIoV1alpha3NamespacedWorkloadGroupStatus",
+            "conf_tested": false,
+            "description": "read status of the specified WorkloadGroup"
+        },
+        {
+            "kind": "Telemetry",
+            "path": "/apis/telemetry.istio.io/v1alpha1/namespaces/{namespace}/telemetries/{name}",
+            "group": "telemetry.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "telemetryIstioIo",
+            "endpoint": "readTelemetryIstioIoV1alpha1NamespacedTelemetry",
+            "conf_tested": false,
+            "description": "read the specified Telemetry"
+        },
+        {
+            "kind": "Telemetry",
+            "path": "/apis/telemetry.istio.io/v1alpha1/namespaces/{namespace}/telemetries/{name}/status",
+            "group": "telemetry.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "get",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "telemetryIstioIo",
+            "endpoint": "readTelemetryIstioIoV1alpha1NamespacedTelemetryStatus",
+            "conf_tested": false,
+            "description": "read status of the specified Telemetry"
+        },
+        {
+            "kind": "WasmPlugin",
+            "path": "/apis/extensions.istio.io/v1alpha1/namespaces/{namespace}/wasmplugins/{name}",
+            "group": "extensions.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "extensionsIstioIo",
+            "endpoint": "replaceExtensionsIstioIoV1alpha1NamespacedWasmPlugin",
+            "conf_tested": false,
+            "description": "replace the specified WasmPlugin"
+        },
+        {
+            "kind": "WasmPlugin",
+            "path": "/apis/extensions.istio.io/v1alpha1/namespaces/{namespace}/wasmplugins/{name}/status",
+            "group": "extensions.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "extensionsIstioIo",
+            "endpoint": "replaceExtensionsIstioIoV1alpha1NamespacedWasmPluginStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified WasmPlugin"
+        },
+        {
+            "kind": "IstioOperator",
+            "path": "/apis/install.istio.io/v1alpha1/namespaces/{namespace}/istiooperators/{name}",
+            "group": "install.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "installIstioIo",
+            "endpoint": "replaceInstallIstioIoV1alpha1NamespacedIstioOperator",
+            "conf_tested": false,
+            "description": "replace the specified IstioOperator"
+        },
+        {
+            "kind": "IstioOperator",
+            "path": "/apis/install.istio.io/v1alpha1/namespaces/{namespace}/istiooperators/{name}/status",
+            "group": "install.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "installIstioIo",
+            "endpoint": "replaceInstallIstioIoV1alpha1NamespacedIstioOperatorStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified IstioOperator"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/destinationrules/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1alpha3NamespacedDestinationRule",
+            "conf_tested": false,
+            "description": "replace the specified DestinationRule"
+        },
+        {
+            "kind": "DestinationRule",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/destinationrules/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1alpha3NamespacedDestinationRuleStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified DestinationRule"
+        },
+        {
+            "kind": "EnvoyFilter",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/envoyfilters/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1alpha3NamespacedEnvoyFilter",
+            "conf_tested": false,
+            "description": "replace the specified EnvoyFilter"
+        },
+        {
+            "kind": "EnvoyFilter",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/envoyfilters/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1alpha3NamespacedEnvoyFilterStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified EnvoyFilter"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/gateways/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1alpha3NamespacedGateway",
+            "conf_tested": false,
+            "description": "replace the specified Gateway"
+        },
+        {
+            "kind": "Gateway",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/gateways/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1alpha3NamespacedGatewayStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified Gateway"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/serviceentries/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1alpha3NamespacedServiceEntry",
+            "conf_tested": false,
+            "description": "replace the specified ServiceEntry"
+        },
+        {
+            "kind": "ServiceEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/serviceentries/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1alpha3NamespacedServiceEntryStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified ServiceEntry"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/sidecars/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1alpha3NamespacedSidecar",
+            "conf_tested": false,
+            "description": "replace the specified Sidecar"
+        },
+        {
+            "kind": "Sidecar",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/sidecars/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1alpha3NamespacedSidecarStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified Sidecar"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/virtualservices/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1alpha3NamespacedVirtualService",
+            "conf_tested": false,
+            "description": "replace the specified VirtualService"
+        },
+        {
+            "kind": "VirtualService",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/virtualservices/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1alpha3NamespacedVirtualServiceStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified VirtualService"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadentries/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1alpha3NamespacedWorkloadEntry",
+            "conf_tested": false,
+            "description": "replace the specified WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadEntry",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadentries/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1alpha3NamespacedWorkloadEntryStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified WorkloadEntry"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadgroups/{name}",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1alpha3NamespacedWorkloadGroup",
+            "conf_tested": false,
+            "description": "replace the specified WorkloadGroup"
+        },
+        {
+            "kind": "WorkloadGroup",
+            "path": "/apis/networking.istio.io/v1alpha3/namespaces/{namespace}/workloadgroups/{name}/status",
+            "group": "networking.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha3",
+            "category": "networkingIstioIo",
+            "endpoint": "replaceNetworkingIstioIoV1alpha3NamespacedWorkloadGroupStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified WorkloadGroup"
+        },
+        {
+            "kind": "Telemetry",
+            "path": "/apis/telemetry.istio.io/v1alpha1/namespaces/{namespace}/telemetries/{name}",
+            "group": "telemetry.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "telemetryIstioIo",
+            "endpoint": "replaceTelemetryIstioIoV1alpha1NamespacedTelemetry",
+            "conf_tested": false,
+            "description": "replace the specified Telemetry"
+        },
+        {
+            "kind": "Telemetry",
+            "path": "/apis/telemetry.istio.io/v1alpha1/namespaces/{namespace}/telemetries/{name}/status",
+            "group": "telemetry.istio.io",
+            "level": "alpha",
+            "tests": [
+                null
+            ],
+            "action": "put",
+            "tested": false,
+            "release": "live",
+            "version": "v1alpha1",
+            "category": "telemetryIstioIo",
+            "endpoint": "replaceTelemetryIstioIoV1alpha1NamespacedTelemetryStatus",
+            "conf_tested": false,
+            "description": "replace status of the specified Telemetry"
+        }
+    ],
+    "release_date": "2023-06-26T10:16:53",
+    "total endpoints": 264,
+    "tested endpoints": 0
+}

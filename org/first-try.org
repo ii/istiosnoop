@@ -1,0 +1,255 @@
+#+title: First Try
+
+* Introduction
+This is work prompted by [[https://github.com/ii/cncf/issues/51][this ticket]], which says:
+#+begin_quote
+- Create the a copy of APISnoop web page on it's own domain. ie. istosnoop.ii.nz
+  - Could be a sub domain of ii.nz or a netlify domain. We would detemain the correct domain later
+- The site should include the CRDs for Istio and it show test cover for e2e tests and conformance test if there is any
+- determain what methods and files we would use for detecting test cover.
+- How will we update the site in production?
+- README that explain the success, how it work and what does not work, do we need external help form CNCF / Isto?
+#+end_quote
+
+It is different enough work to need its own repo, and so am starting it here.
+* Basic APISnoop flow
+The AP Snoop site is built around a set of json files found in its repo under
+~/resources/coverage~. These are generated through an automated workflow that
+pulls in test data from the kubernetes test infra audit logs.
+
+These jsons, currently, do not have any Istio CRD's, as those are not required for conformance.
+
+If we are to do just a copy of the apisnoop site, then the simplest would be to change the url it
+pulls to get its json to be this repo, and then to produce some coverage json that includes the Istio CRD's.
+
+* Tasks
+** DONE Bring over the snoopdb and webapp code
+** DONE Change title and wording in website code
+** Reduce Website Code to just the frontpage
+** Generate coverage json that includes Istio CRD's
+we have a function called "generate_latest_coverage", but it uses the latest release, which we don't have in this db.
+
+#+begin_src sql-mode
+select distinct release::text from open_api;
+#+end_src
+
+#+RESULTS:
+#+begin_SRC example
+ release
+---------
+ live
+(1 row)
+
+#+end_SRC
+
+It also loads from our public.audit_event, but all our istio endpoints are being put into test.audit_event;
+
+#+begin_src sql-mode
+select distinct release from audit_event;
+#+end_src
+
+#+RESULTS:
+#+begin_SRC example
+ release
+---------
+ 1.28.0
+(1 row)
+
+#+end_SRC
+
+#+begin_src sql-mode
+select distinct release from testing.audit_event;
+#+end_src
+
+#+RESULTS:
+#+begin_SRC example
+ release
+---------
+ live
+(1 row)
+
+#+end_SRC
+
+So i think we'll want our own custom function for genearing the coverage.  In the future, we'll want to have some testing framework set up that we are
+loading form instead.
+
+*** create  istio endpoint coverage
+#+begin_src sql-mode
+begin;
+select release, endpoint, level, category, path, description,
+       k8s_kind as kind,
+       k8s_version as version,
+       k8s_group as group,
+       k8s_action as action,
+       (count(test_hit) filter(where test_hit is true)>0) as tested,
+       (count(conf_test_hit) filter(where conf_test_hit is true)>0) as conf_tested,
+       array_agg(distinct test) as tests
+  from      open_api
+  left join testing.audit_event using (endpoint, release)
+ where deprecated is false
+       and endpoint ilike '%istio%'
+ group by release, endpoint, level, category, path, description, kind, version, k8s_group, k8s_action
+ order by level desc, endpoint
+          limit 50;
+rollback;
+#+end_src
+
+#+RESULTS:
+#+begin_SRC example
+BEGIN
+apisnoop=*# apisnoop-*# apisnoop-*# apisnoop-*# apisnoop-*# apisnoop-*# apisnoop-*# apisnoop-*# apisnoop-*# apisnoop-*# apisnoop-*# apisnoop-*# apisnoop-*# apisnoop-*# apisnoop-*#  release |                              endpoint                               | level  |     category      |                                          path                                          |                          description                           |         kind          | version |        group        |      action      | tested | conf_tested |                                          tests
+---------+---------------------------------------------------------------------+--------+-------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------+-----------------------+---------+---------------------+------------------+--------+-------------+-----------------------------------------------------------------------------------------
+ live    | createSecurityIstioIoV1NamespacedAuthorizationPolicy                | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies                | create an AuthorizationPolicy                                  | AuthorizationPolicy   | v1      | security.istio.io   | post             | f      | f           | {NULL}
+ live    | createSecurityIstioIoV1NamespacedRequestAuthentication              | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications               | create a RequestAuthentication                                 | RequestAuthentication | v1      | security.istio.io   | post             | f      | f           | {NULL}
+ live    | deleteSecurityIstioIoV1CollectionNamespacedAuthorizationPolicy      | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies                | delete collection of AuthorizationPolicy                       | AuthorizationPolicy   | v1      | security.istio.io   | deletecollection | f      | f           | {NULL}
+ live    | deleteSecurityIstioIoV1CollectionNamespacedRequestAuthentication    | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications               | delete collection of RequestAuthentication                     | RequestAuthentication | v1      | security.istio.io   | deletecollection | f      | f           | {NULL}
+ live    | deleteSecurityIstioIoV1NamespacedAuthorizationPolicy                | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies/{name}         | delete an AuthorizationPolicy                                  | AuthorizationPolicy   | v1      | security.istio.io   | delete           | f      | f           | {NULL}
+ live    | deleteSecurityIstioIoV1NamespacedRequestAuthentication              | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications/{name}        | delete a RequestAuthentication                                 | RequestAuthentication | v1      | security.istio.io   | delete           | f      | f           | {NULL}
+ live    | listSecurityIstioIoV1AuthorizationPolicyForAllNamespaces            | stable | securityIstioIo   | /apis/security.istio.io/v1/authorizationpolicies                                       | list objects of kind AuthorizationPolicy                       | AuthorizationPolicy   | v1      | security.istio.io   | list             | f      | f           | {"kube-controller-manager/v1.27.3 (linux/amd64) kubernetes/25b4e43/metadata-informers"}
+ live    | listSecurityIstioIoV1NamespacedAuthorizationPolicy                  | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies                | list objects of kind AuthorizationPolicy                       | AuthorizationPolicy   | v1      | security.istio.io   | list             | f      | f           | {NULL}
+ live    | listSecurityIstioIoV1NamespacedRequestAuthentication                | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications               | list objects of kind RequestAuthentication                     | RequestAuthentication | v1      | security.istio.io   | list             | f      | f           | {NULL}
+ live    | listSecurityIstioIoV1RequestAuthenticationForAllNamespaces          | stable | securityIstioIo   | /apis/security.istio.io/v1/requestauthentications                                      | list objects of kind RequestAuthentication                     | RequestAuthentication | v1      | security.istio.io   | list             | f      | f           | {"kube-controller-manager/v1.27.3 (linux/amd64) kubernetes/25b4e43/metadata-informers"}
+ live    | patchSecurityIstioIoV1NamespacedAuthorizationPolicy                 | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies/{name}         | partially update the specified AuthorizationPolicy             | AuthorizationPolicy   | v1      | security.istio.io   | patch            | f      | f           | {NULL}
+ live    | patchSecurityIstioIoV1NamespacedAuthorizationPolicyStatus           | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies/{name}/status  | partially update status of the specified AuthorizationPolicy   | AuthorizationPolicy   | v1      | security.istio.io   | patch            | f      | f           | {NULL}
+ live    | patchSecurityIstioIoV1NamespacedRequestAuthentication               | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications/{name}        | partially update the specified RequestAuthentication           | RequestAuthentication | v1      | security.istio.io   | patch            | f      | f           | {NULL}
+ live    | patchSecurityIstioIoV1NamespacedRequestAuthenticationStatus         | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications/{name}/status | partially update status of the specified RequestAuthentication | RequestAuthentication | v1      | security.istio.io   | patch            | f      | f           | {NULL}
+ live    | readSecurityIstioIoV1NamespacedAuthorizationPolicy                  | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies/{name}         | read the specified AuthorizationPolicy                         | AuthorizationPolicy   | v1      | security.istio.io   | get              | f      | f           | {NULL}
+ live    | readSecurityIstioIoV1NamespacedAuthorizationPolicyStatus            | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies/{name}/status  | read status of the specified AuthorizationPolicy               | AuthorizationPolicy   | v1      | security.istio.io   | get              | f      | f           | {NULL}
+ live    | readSecurityIstioIoV1NamespacedRequestAuthentication                | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications/{name}        | read the specified RequestAuthentication                       | RequestAuthentication | v1      | security.istio.io   | get              | f      | f           | {NULL}
+ live    | readSecurityIstioIoV1NamespacedRequestAuthenticationStatus          | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications/{name}/status | read status of the specified RequestAuthentication             | RequestAuthentication | v1      | security.istio.io   | get              | f      | f           | {NULL}
+ live    | replaceSecurityIstioIoV1NamespacedAuthorizationPolicy               | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies/{name}         | replace the specified AuthorizationPolicy                      | AuthorizationPolicy   | v1      | security.istio.io   | put              | f      | f           | {NULL}
+ live    | replaceSecurityIstioIoV1NamespacedAuthorizationPolicyStatus         | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/authorizationpolicies/{name}/status  | replace status of the specified AuthorizationPolicy            | AuthorizationPolicy   | v1      | security.istio.io   | put              | f      | f           | {NULL}
+ live    | replaceSecurityIstioIoV1NamespacedRequestAuthentication             | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications/{name}        | replace the specified RequestAuthentication                    | RequestAuthentication | v1      | security.istio.io   | put              | f      | f           | {NULL}
+ live    | replaceSecurityIstioIoV1NamespacedRequestAuthenticationStatus       | stable | securityIstioIo   | /apis/security.istio.io/v1/namespaces/{namespace}/requestauthentications/{name}/status | replace status of the specified RequestAuthentication          | RequestAuthentication | v1      | security.istio.io   | put              | f      | f           | {NULL}
+ live    | createNetworkingIstioIoV1beta1NamespacedDestinationRule             | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/destinationrules              | create a DestinationRule                                       | DestinationRule       | v1beta1 | networking.istio.io | post             | f      | f           | {NULL}
+ live    | createNetworkingIstioIoV1beta1NamespacedGateway                     | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/gateways                      | create a Gateway                                               | Gateway               | v1beta1 | networking.istio.io | post             | f      | f           | {NULL}
+ live    | createNetworkingIstioIoV1beta1NamespacedProxyConfig                 | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/proxyconfigs                  | create a ProxyConfig                                           | ProxyConfig           | v1beta1 | networking.istio.io | post             | f      | f           | {NULL}
+ live    | createNetworkingIstioIoV1beta1NamespacedServiceEntry                | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/serviceentries                | create a ServiceEntry                                          | ServiceEntry          | v1beta1 | networking.istio.io | post             | f      | f           | {NULL}
+ live    | createNetworkingIstioIoV1beta1NamespacedSidecar                     | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/sidecars                      | create a Sidecar                                               | Sidecar               | v1beta1 | networking.istio.io | post             | f      | f           | {NULL}
+ live    | createNetworkingIstioIoV1beta1NamespacedVirtualService              | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/virtualservices               | create a VirtualService                                        | VirtualService        | v1beta1 | networking.istio.io | post             | f      | f           | {NULL}
+ live    | createNetworkingIstioIoV1beta1NamespacedWorkloadEntry               | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadentries               | create a WorkloadEntry                                         | WorkloadEntry         | v1beta1 | networking.istio.io | post             | f      | f           | {NULL}
+ live    | createNetworkingIstioIoV1beta1NamespacedWorkloadGroup               | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadgroups                | create a WorkloadGroup                                         | WorkloadGroup         | v1beta1 | networking.istio.io | post             | f      | f           | {NULL}
+ live    | createSecurityIstioIoV1beta1NamespacedAuthorizationPolicy           | beta   | securityIstioIo   | /apis/security.istio.io/v1beta1/namespaces/{namespace}/authorizationpolicies           | create an AuthorizationPolicy                                  | AuthorizationPolicy   | v1beta1 | security.istio.io   | post             | f      | f           | {NULL}
+ live    | createSecurityIstioIoV1beta1NamespacedPeerAuthentication            | beta   | securityIstioIo   | /apis/security.istio.io/v1beta1/namespaces/{namespace}/peerauthentications             | create a PeerAuthentication                                    | PeerAuthentication    | v1beta1 | security.istio.io   | post             | f      | f           | {NULL}
+ live    | createSecurityIstioIoV1beta1NamespacedRequestAuthentication         | beta   | securityIstioIo   | /apis/security.istio.io/v1beta1/namespaces/{namespace}/requestauthentications          | create a RequestAuthentication                                 | RequestAuthentication | v1beta1 | security.istio.io   | post             | f      | f           | {NULL}
+ live    | deleteNetworkingIstioIoV1beta1CollectionNamespacedDestinationRule   | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/destinationrules              | delete collection of DestinationRule                           | DestinationRule       | v1beta1 | networking.istio.io | deletecollection | f      | f           | {NULL}
+ live    | deleteNetworkingIstioIoV1beta1CollectionNamespacedGateway           | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/gateways                      | delete collection of Gateway                                   | Gateway               | v1beta1 | networking.istio.io | deletecollection | f      | f           | {NULL}
+ live    | deleteNetworkingIstioIoV1beta1CollectionNamespacedProxyConfig       | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/proxyconfigs                  | delete collection of ProxyConfig                               | ProxyConfig           | v1beta1 | networking.istio.io | deletecollection | f      | f           | {NULL}
+ live    | deleteNetworkingIstioIoV1beta1CollectionNamespacedServiceEntry      | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/serviceentries                | delete collection of ServiceEntry                              | ServiceEntry          | v1beta1 | networking.istio.io | deletecollection | f      | f           | {NULL}
+ live    | deleteNetworkingIstioIoV1beta1CollectionNamespacedSidecar           | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/sidecars                      | delete collection of Sidecar                                   | Sidecar               | v1beta1 | networking.istio.io | deletecollection | f      | f           | {NULL}
+ live    | deleteNetworkingIstioIoV1beta1CollectionNamespacedVirtualService    | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/virtualservices               | delete collection of VirtualService                            | VirtualService        | v1beta1 | networking.istio.io | deletecollection | f      | f           | {NULL}
+ live    | deleteNetworkingIstioIoV1beta1CollectionNamespacedWorkloadEntry     | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadentries               | delete collection of WorkloadEntry                             | WorkloadEntry         | v1beta1 | networking.istio.io | deletecollection | f      | f           | {NULL}
+ live    | deleteNetworkingIstioIoV1beta1CollectionNamespacedWorkloadGroup     | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadgroups                | delete collection of WorkloadGroup                             | WorkloadGroup         | v1beta1 | networking.istio.io | deletecollection | f      | f           | {NULL}
+ live    | deleteNetworkingIstioIoV1beta1NamespacedDestinationRule             | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/destinationrules/{name}       | delete a DestinationRule                                       | DestinationRule       | v1beta1 | networking.istio.io | delete           | f      | f           | {NULL}
+ live    | deleteNetworkingIstioIoV1beta1NamespacedGateway                     | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/gateways/{name}               | delete a Gateway                                               | Gateway               | v1beta1 | networking.istio.io | delete           | f      | f           | {NULL}
+ live    | deleteNetworkingIstioIoV1beta1NamespacedProxyConfig                 | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/proxyconfigs/{name}           | delete a ProxyConfig                                           | ProxyConfig           | v1beta1 | networking.istio.io | delete           | f      | f           | {NULL}
+ live    | deleteNetworkingIstioIoV1beta1NamespacedServiceEntry                | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/serviceentries/{name}         | delete a ServiceEntry                                          | ServiceEntry          | v1beta1 | networking.istio.io | delete           | f      | f           | {NULL}
+ live    | deleteNetworkingIstioIoV1beta1NamespacedSidecar                     | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/sidecars/{name}               | delete a Sidecar                                               | Sidecar               | v1beta1 | networking.istio.io | delete           | f      | f           | {NULL}
+ live    | deleteNetworkingIstioIoV1beta1NamespacedVirtualService              | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/virtualservices/{name}        | delete a VirtualService                                        | VirtualService        | v1beta1 | networking.istio.io | delete           | f      | f           | {NULL}
+ live    | deleteNetworkingIstioIoV1beta1NamespacedWorkloadEntry               | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadentries/{name}        | delete a WorkloadEntry                                         | WorkloadEntry         | v1beta1 | networking.istio.io | delete           | f      | f           | {NULL}
+ live    | deleteNetworkingIstioIoV1beta1NamespacedWorkloadGroup               | beta   | networkingIstioIo | /apis/networking.istio.io/v1beta1/namespaces/{namespace}/workloadgroups/{name}         | delete a WorkloadGroup                                         | WorkloadGroup         | v1beta1 | networking.istio.io | delete           | f      | f           | {NULL}
+ live    | deleteSecurityIstioIoV1beta1CollectionNamespacedAuthorizationPolicy | beta   | securityIstioIo   | /apis/security.istio.io/v1beta1/namespaces/{namespace}/authorizationpolicies           | delete collection of AuthorizationPolicy                       | AuthorizationPolicy   | v1beta1 | security.istio.io   | deletecollection | f      | f           | {NULL}
+(50 rows)
+
+apisnoop=*# ROLLBACK
+#+end_SRC
+
+#+begin_src sql-mode
+begin;
+create or replace view istio_endpoint_coverage as
+select release, endpoint, level, category, path, description,
+       k8s_kind as kind,
+       k8s_version as version,
+       k8s_group as group,
+       k8s_action as action,
+       (count(test_hit) filter(where test_hit is true)>0) as tested,
+       (count(conf_test_hit) filter(where conf_test_hit is true)>0) as conf_tested,
+       array_agg(distinct test) as tests
+  from      open_api
+  left join audit_event using (endpoint, release)
+ where deprecated is false
+  and endpoint ilike '%istio%'
+ group by release, endpoint, level, category, path, description, kind, version, k8s_group, k8s_action
+ order by level desc, endpoint;
+select count(*) from istio_endpoint_coverage;
+commit;
+#+end_src
+*** new generate_latest_coverage
+#+begin_src sql-mode
+drop function generate_latest_istio_coverage_json;
+#+end_src
+
+#+RESULTS:
+#+begin_SRC example
+DROP FUNCTION
+#+end_SRC
+
+
+#+begin_src sql-mode
+begin;
+create or replace function generate_latest_istio_coverage_json()
+returns json as $$
+declare latest_release varchar;
+begin
+select release into latest_release from testing.audit_event limit 1;
+return(
+select jsonb_pretty(row_to_json(c)::jsonb) from (
+    select open_api.release, open_api.release_date, open_api.spec,
+        count(distinct ec.endpoint)  as "total endpoints",
+        count(distinct ec.endpoint) filter (where ec.tested is true)  as "tested endpoints",
+        (select array_agg(source) from (select source from audit_event where release = latest_release group by source) s) as sources,
+        (select array_agg(row_to_json(istio_endpoint_coverage)) from istio_endpoint_coverage where release = latest_release and endpoint is not null) as endpoints,
+        (select array_agg(row_to_json(audit_event_test)) from audit_event_test where release = latest_release) as tests
+    from open_api
+    join istio_endpoint_coverage ec using(release)
+    where open_api.release = latest_release
+    group by open_api.release, open_api.release_date, open_api.spec) c);
+end;
+$$ language plpgsql;
+
+commit;
+#+end_src
+
+
+
+#+RESULTS:
+#+begin_SRC example
+BEGIN
+apisnoop=*# apisnoop-*# apisnoop$*# apisnoop$*# apisnoop$*# apisnoop$*# apisnoop$*# apisnoop$*# apisnoop$*# apisnoop$*# apisnoop$*# apisnoop$*# apisnoop$*# apisnoop$*# apisnoop$*# apisnoop$*# apisnoop$*# apisnoop$*# apisnoop$*# CREATE FUNCTION
+apisnoop=*# apisnoop=*# COMMIT
+#+end_SRC
+
+And then let's try to output the file
+
+#+begin_src sql-mode
+begin;
+    -- move this to its own block if it works
+  --   CREATE FUNCTION array_distinct(anyarray) RETURNS anyarray AS $f$
+  -- SELECT array_agg(DISTINCT x) FROM unnest($1) t(x);
+ \! mkdir -p /tmp/coverage
+ \gset
+ \set output_file '/tmp/coverage/istio.json'
+ \t
+ \a
+ \o :output_file
+   select * from generate_latest_istio_coverage_json();
+ \o
+ \a
+ \t
+commit;
+#+end_src
+
+#+RESULTS:
+#+begin_SRC example
+BEGIN
+apisnoop=*# apisnoop=*# apisnoop=*# apisnoop=*# apisnoop=*# WARNING:  there is already a transaction in progress
+BEGIN
+apisnoop=*# apisnoop=*# Tuples only is on.
+apisnoop=*# Output format is unaligned.
+apisnoop=*# apisnoop=*# apisnoop=*# apisnoop=*# Output format is aligned.
+apisnoop=*# Tuples only is off.
+apisnoop=*# COMMIT
+#+end_SRC
+
+** Pipe Coverage JSON's to new site
+Now that we have a basic file, we want to commit this, and update our webapp to pull from it.
