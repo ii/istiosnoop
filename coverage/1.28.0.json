@@ -1,7 +1,7 @@
 {
     "spec": "incluster",
     "tests": null,
-    "release": "live",
+    "release": "1.28.0",
     "sources": null,
     "endpoints": [
         {
